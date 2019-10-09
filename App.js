@@ -4,16 +4,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
 import HomeScreen from './screens/HomeScreen';
-
-class DetailsScreen extends Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Details Screen</Text>
-      </View>
-    );
-  }
-}
+import DetailsScreen from './screens/Details';
 
 const AppNavigator = createStackNavigator(
   {
