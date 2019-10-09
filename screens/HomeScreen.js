@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Linking } from 'react-native';
+import Drawer from 'react-native-drawer';
 
 import ToggleButton from '../components/ToggleButton/ToggleButton';
 import Menu from '../components/Menu/Menu';
@@ -8,19 +9,21 @@ class HomeScreen extends Component {
     static navigationOptions = {
         header: null
     }
+
     render() {
         return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            <View style={styles.screen}>
                 <ToggleButton />
-                <Menu navigation={this.props.navigation} />
-                <Text>Home Screen</Text>
-                <Button 
-                title="Go to Details"
-                onPress={() => this.props.navigation.navigate('Details')}
-                />
+                <Menu />
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    screen: {
+        flex: 1,
+    }
+})
 
 export default HomeScreen;

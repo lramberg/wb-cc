@@ -14,8 +14,12 @@ const Menu = (props) => {
 const styles = StyleSheet.create({
     menu: {
         height: '50%',
-        width: '50%',
+        width: '70%',
         backgroundColor: 'gray',
+        zIndex: 100,
+        top: '15%',
+        right: -150,
+        padding: 20
     }
 })
 
