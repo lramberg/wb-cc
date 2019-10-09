@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 
 const ToggleButton = (props) => {
     return (
-        <TouchableOpacity onPress={props.toggleDrawer} >
+        <TouchableOpacity onPress={props.toggleMenu} >
             <View style={styles.buttonWrapper} >
                 <View style={styles.iconLine}></View>
                 <View style={styles.iconLine}></View>
