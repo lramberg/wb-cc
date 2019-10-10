@@ -74,7 +74,7 @@ class HomeScreen extends Component {
                     }}
                 >
                     <Text  style={styles.text} onPress={() => this.props.navigation.navigate('Home')}>Home</Text>
-                    <Text  style={styles.text} onPress={() => Linking.openURL('https://wildebee.st/')}>Wildebeest Website</Text>
+                    <Text  style={styles.text} onPress={() => Linking.openURL('https://wildebee.st/')}>Wildebeest Site</Text>
                     <Text  style={styles.text} onPress={() => this.props.navigation.navigate('Web')}>My Favorite Thing</Text>
                 </Animated.View>
             </View>
