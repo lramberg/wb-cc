@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import HomeScreen from './screens/HomeScreen';
-import WebViewScreen from './screens/WebViewScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import WebViewScreen from './src/screens/WebViewScreen';
 
 const AppNavigator = createStackNavigator(
   {

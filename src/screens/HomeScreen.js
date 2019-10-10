@@ -44,9 +44,9 @@ class HomeScreen extends Component {
         let { animatedValue } = this.state;
         var btn;
         if (this.state.menuOpen) {
-            btn = <CloseMenuButton closeMenu={this.closeMenu}/>
+            btn = <CloseMenuButton animatedValue={this.state.animatedValue} closeMenu={this.closeMenu}/>
         } else {
-            btn = <OpenMenuButton openMenu={this.openMenu}/>
+            btn = <OpenMenuButton animatedValue={this.state.animatedValue} openMenu={this.openMenu}/>
         }
 
         return (
@@ -58,7 +58,7 @@ class HomeScreen extends Component {
                             {
                                 translateX: animatedValue.interpolate({
                                     inputRange: [0, 1],
-                                    outputRange: [600, 100]
+                                    outputRange: [400, 100]
                                 })
                             }
                         ],
