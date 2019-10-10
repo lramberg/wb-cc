@@ -38,12 +38,13 @@ class HomeScreen extends Component {
                             {
                                 translateX: animatedValue.interpolate({
                                     inputRange: [0, 1],
-                                    outputRange: [600, 0]
+                                    outputRange: [600, 95]
                                 })
                             }
                         ],
                         height: '50%',
                         width: '70%',
+                        top: '15%',
                         backgroundColor: '#d6d3db',
                         zIndex: 100,
                         padding: 20,
