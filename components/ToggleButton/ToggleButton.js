@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 
 const ToggleButton = (props) => {
     return (
-        <TouchableOpacity onPress={props.toggleMenu} >
+        <TouchableOpacity onPress={props.animateMenu} >
             <View style={styles.buttonWrapper} >
                 <View style={styles.iconLine}></View>
                 <View style={styles.iconLine}></View>
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         right: '-80%'
     },
     iconLine: {
-        backgroundColor: "blue",
+        backgroundColor: "#c4ffee",
         width: 30,
         height: 2
     }
