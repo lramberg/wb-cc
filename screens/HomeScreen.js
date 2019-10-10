@@ -5,7 +5,6 @@ import {
     Text, 
     Animated, 
     Linking, 
-    TouchableOpacity 
 } from 'react-native';
 
 import ToggleButton from '../components/ToggleButton/ToggleButton';
@@ -55,7 +54,7 @@ class HomeScreen extends Component {
                 >
                     <Text  style={styles.text} onPress={() => this.props.navigation.navigate('Home')}>Home</Text>
                     <Text  style={styles.text} onPress={() => Linking.openURL('https://wildebee.st/')}>Wildebeest Website</Text>
-                    <Text  style={styles.text} onPress={() => props.navigation.navigate('Web')}>My Favorite Thing</Text>
+                    <Text  style={styles.text} onPress={() => this.props.navigation.navigate('Web')}>My Favorite Thing</Text>
                 </Animated.View>
             </View>
         );
