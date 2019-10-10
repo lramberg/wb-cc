@@ -7,7 +7,8 @@ import {
     Linking, 
 } from 'react-native';
 
-import ToggleButton from '../components/ToggleButton/ToggleButton';
+import OpenMenuButton from '../components/OpenMenuButton/OpenMenuButton';
+import CloseMenuButton from '../components/CloseMenuButton/CloseMenuButton';
 
 class HomeScreen extends Component {
     static navigationOptions = {
@@ -15,30 +16,49 @@ class HomeScreen extends Component {
     }
 
     state = {
+        menuOpen: false,
         animatedValue: new Animated.Value(0)
     }
 
-    animate = () => {
+    openMenu = () => {
+        this.setState({ menuOpen: !this.state.menuOpen })
         Animated.timing(this.state.animatedValue,
             {
                 toValue: 1,
                 duration: 1000
             }
+            ).start();
+    };
+        
+    closeMenu = () => {
+        this.setState({ menuOpen: !this.state.menuOpen })
+        Animated.timing(this.state.animatedValue,
+        {
+            toValue: 0,
+            duration: 1000
+        }
         ).start();
     };
 
     render() {
         let { animatedValue } = this.state;
+        var btn;
+        if (this.state.menuOpen) {
+            btn = <CloseMenuButton closeMenu={this.closeMenu}/>
+        } else {
+            btn = <OpenMenuButton openMenu={this.openMenu}/>
+        }
+
         return (
             <View style={styles.screen}>
-                <ToggleButton animateMenu={this.animate}/>
+                { btn }
                 <Animated.View
                     style={{
                         transform: [
                             {
                                 translateX: animatedValue.interpolate({
                                     inputRange: [0, 1],
-                                    outputRange: [600, 95]
+                                    outputRange: [600, 100]
                                 })
                             }
                         ],

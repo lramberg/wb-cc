@@ -6,7 +6,7 @@ class MyWeb extends Component {
         return (
             <WebView 
                 style={{ flex: 1 }}
-                source={{ uri: 'https://youtu.be/aRxgmYDmwMA?t=62'}}
+                source={{ uri: 'https://youtu.be/aRxgmYDmwMA?t=63'}}
                 javaScriptEnabled={true}
                 domStorageEnabled={true}
             />

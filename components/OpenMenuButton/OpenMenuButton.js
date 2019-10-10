@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 
-const ToggleButton = (props) => {
+const OpenMenuButton = (props) => {
     return (
-        <TouchableOpacity onPress={props.animateMenu} >
+        <TouchableOpacity onPress={props.openMenu} >
             <View style={styles.buttonWrapper} >
                 <View style={styles.iconLine}></View>
                 <View style={styles.iconLine}></View>
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default ToggleButton;
+export default OpenMenuButton;
